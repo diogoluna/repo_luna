@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel: Google for Creators</title>
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Slide Proporção 4:5 (Instagram) */
+        .slide {
+            width: 320px; /* Reduzido para melhor visualização na web, original seria 1080px */
+            height: 400px; /* Reduzido, original seria 1350px */
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        /* Cores do Google */
+        .google-blue { color: #4285F4; }
+        .google-red { color: #EA4335; }
+        .google-yellow { color: #FBBC05; }
+        .google-green { color: #34A853; }
+
+        .bg-google-blue { background-color: #4285F4; color: white; }
+        .bg-google-red { background-color: #EA4335; color: white; }
+        .bg-google-green { background-color: #34A853; color: white; }
+        .bg-dark { background-color: #202124; color: white; }
+
+        .title {
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            margin-top: 10px;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #5f6368;
+            flex-grow: 1;
+        }
+
+        .slide.bg-dark .text, .slide.bg-google-blue .text {
+            color: #e8eaed;
+        }
+
+        .footer {
+            font-size: 12px;
+            font-weight: bold;
+            color: #9aa0a6;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .slide.bg-dark .footer, .slide.bg-google-blue .footer {
+            color: #9aa0a6;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        /* Decorações */
+        .circle-decor {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .slide > * {
+            z-index: 1;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1 -->
+    <div class="slide">
+        <div class="circle-decor" style="width: 150px; height: 150px; background-color: #e8f0fe; top: -50px; right: -50px;"></div>
+        <div class="circle-decor" style="width: 80px; height: 80px; background-color: #fce8e6; bottom: 30px; left: -20px;"></div>
+
+        <div class="icon-container" style="margin-top: 20px;">
+            <span style="font-size: 80px; font-weight: 900;" class="google-blue">G</span>
+        </div>
+
+        <div class="title" style="text-align: center; margin-top: 20px;">
+            Você conhece o <br><span class="google-blue">Google</span> <span class="google-red">for</span> <span class="google-yellow">Creators</span>? 🤔
+        </div>
+
+        <div class="text" style="text-align: center; font-weight: bold; font-size: 16px;">
+            Descubra a plataforma que vai decolar seu conteúdo na web! 🚀
+        </div>
+
+        <div class="footer">Arraste para o lado 👉</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <span class="badge bg-google-blue">Conceito</span>
+        <div class="title">O que é o Google for Creators?</div>
+
+        <div class="icon-container">
+            🧑‍💻
+        </div>
+
+        <div class="text">
+            É o hub oficial do Google focado em <strong>você</strong>, criador de conteúdo!<br><br>
+            Ele reúne ferramentas, guias e inspirações para ajudar criadores a construir e otimizar sites, blogs e histórias na internet, não dependendo apenas das redes sociais.
+        </div>
+
+        <div class="footer">02/07</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide bg-dark">
+        <div class="circle-decor" style="width: 200px; height: 200px; background-color: #3c4043; bottom: -100px; right: -100px;"></div>
+        <span class="badge" style="background-color: #fbbc05; color: #202124;">SEO</span>
+        <div class="title" style="color: white;">Dono do seu próprio palco! 🏗️</div>
+
+        <div class="icon-container">
+            🚀
+        </div>
+
+        <div class="text">
+            Nas redes sociais, você aluga um espaço. Na web, a casa é sua.<br><br>
+            O Google te ajuda a construir uma audiência própria através de blogs e sites, garantindo que as pessoas encontrem você pelas buscas orgânicas (SEO).
+        </div>
+
+        <div class="footer">03/07</div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <span class="badge bg-google-red">Formatos</span>
+        <div class="title">Você já usa os Web Stories? 📱</div>
+
+        <div class="icon-container" style="color: #EA4335;">
+            🤳
+        </div>
+
+        <div class="text">
+            Sabe aquele formato de Stories que a gente ama? O Google tem também!<br><br>
+            Os <strong>Web Stories</strong> aparecem na Busca e no Discover. É uma forma visual e poderosa de atrair milhares de acessos gratuitos.
+        </div>
+
+        <div class="footer">04/07</div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <span class="badge bg-google-green">Dados</span>
+        <div class="title">Seja encontrado por quem importa 🔍</div>
+
+        <div class="icon-container">
+            📊
+        </div>
+
+        <div class="text">
+            Com ferramentas gratuitas como o <strong>Search Console</strong> e o <strong>Trends</strong>, você descobre <em>exatamente</em> o que sua audiência busca.<br><br>
+            Crie o conteúdo certo, para a pessoa certa, na hora certa.
+        </div>
+
+        <div class="footer">05/07</div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" style="background-color: #e6f4ea;">
+        <span class="badge bg-google-green">Monetização</span>
+        <div class="title" style="color: #137333;">E a monetização? 💸</div>
+
+        <div class="icon-container">
+            💰
+        </div>
+
+        <div class="text" style="color: #1e8e3e;">
+            A plataforma também te orienta a ganhar dinheiro com sua paixão!<br><br>
+            Seja através do <strong>Google AdSense</strong> (exibindo anúncios) ou programas de afiliados, eles ensinam a transformar cliques em renda.
+        </div>
+
+        <div class="footer" style="color: #137333;">06/07</div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide bg-google-blue">
+        <div class="circle-decor" style="width: 300px; height: 300px; background-color: #1a73e8; top: -150px; left: -150px;"></div>
+
+        <div class="title" style="color: white; font-size: 26px; text-align: center; margin-top: 40px;">
+            A web aberta te espera!
+        </div>
+
+        <div class="text" style="text-align: center; color: white; font-size: 16px;">
+            Acesse <strong>creators.google</strong> e comece a construir sua audiência hoje mesmo.
+        </div>
+
+        <div class="icon-container" style="font-size: 40px; gap: 15px; margin-top: 20px;">
+            ❤️ 💬 ✈️ 💾
+        </div>
+
+        <div style="text-align: center; color: #e8f0fe; font-size: 12px; margin-bottom: 20px; font-weight: bold;">
+            Gostou? Salve para não esquecer!
+        </div>
+
+        <div class="footer" style="color: #e8f0fe;">07/07</div>
+    </div>
+
+</body>
+</html>
